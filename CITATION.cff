@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "OpenClaw Skills Catalog: Linux Compatibility and Registry Metadata"
+authors:
+  - family-names: Bhardwaj
+    given-names: Mehul
+    affiliation: Vessel
+    website: "https://vesselofone.com"
+abstract: >-
+  Weekly-refreshed dataset of every skill in the openclaw/skills
+  catalog, classified by Linux dependency resolution, ClawHub
+  registry metadata (downloads, stars, summary, moderation
+  status, version history), and last-commit dates. Produced by
+  static analysis of SKILL.md frontmatter against a verified
+  Linux install map. Covers ~7,000 skills, updated Mondays.
+keywords:
+  - openclaw
+  - skills
+  - ai-agents
+  - software-supply-chain
+  - skill-catalog
+  - linux-compatibility
+license: CC-BY-4.0
+repository-code: "https://github.com/vesselofone/openclaw-skills"
+url: "https://vesselofone.com/skills/openclaw"

@@ -1,0 +1,6 @@
+# Local scan outputs — checked-in data lives in data/ and reports/, not here.
+coverage-output/
+**/__pycache__/
+*.pyc
+.venv/
+.DS_Store

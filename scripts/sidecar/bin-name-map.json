@@ -1,0 +1,183 @@
+{
+  "gh": {
+    "fallback": {
+      "version": "2.67.0",
+      "url": "https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_linux_amd64.tar.gz",
+      "sha256": "d77623479bec017ef8eebadfefc785bafd4658343b3eb6d3f3e26fd5e11368d5",
+      "strip": 2
+    },
+    "auth": { "type": "env", "vars": ["GITHUB_TOKEN"], "docs": "github.com/settings/tokens" }
+  },
+  "rg": {
+    "fallback": {
+      "version": "14.1.1",
+      "url": "https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz",
+      "sha256": "4cf9f2741e6c465ffdb7c26f38056a59e2a2544b51f7cc128ef28337eeae4d8e",
+      "strip": 1
+    }
+  },
+  "himalaya": {
+    "fallback": {
+      "version": "1.1.0",
+      "url": "https://github.com/pimalaya/himalaya/releases/download/v1.1.0/himalaya.x86_64-linux.tgz",
+      "sha256": "9b18796d2da11c01847ebea1943ea464352dd019814d2318e1819c5e99c54063",
+      "strip": 0
+    },
+    "auth": { "type": "config_file", "docs": "pimalaya.org/himalaya/cli/configuration" }
+  },
+  "uv": {
+    "fallback": {
+      "version": "0.6.12",
+      "url": "https://github.com/astral-sh/uv/releases/download/0.6.12/uv-x86_64-unknown-linux-musl.tar.gz",
+      "sha256": "25f055a556576003fefc0f5fd213bf3c6df1824d4c7fc35e6361fbecc420139f",
+      "strip": 1,
+      "also_install": ["uvx"]
+    }
+  },
+  "uvx": {
+    "fallback": {
+      "version": "0.6.12",
+      "url": "https://github.com/astral-sh/uv/releases/download/0.6.12/uv-x86_64-unknown-linux-musl.tar.gz",
+      "sha256": "25f055a556576003fefc0f5fd213bf3c6df1824d4c7fc35e6361fbecc420139f",
+      "strip": 1,
+      "binary_name": "uvx"
+    }
+  },
+  "bun": {
+    "fallback": {
+      "version": "1.3.12",
+      "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.12/bun-linux-x64.zip",
+      "sha256": "11dc3ee11bc1695e149737c6ca3d5619302cf4346e6b8a6ec7988967ef01ddc5",
+      "strip": 0
+    }
+  },
+  "jq":              { "apt": "jq" },
+  "tmux":            { "apt": "tmux" },
+  "ffmpeg":          { "apt": "ffmpeg" },
+  "pandoc":          { "apt": "pandoc" },
+  "tesseract":       { "apt": "tesseract-ocr" },
+  "convert":         { "apt": "imagemagick" },
+  "magick":          { "apt": "imagemagick" },
+  "wget":            { "apt": "wget" },
+  "curl":            { "apt": "curl" },
+  "python3":         { "apt": "python3" },
+  "pip3":            { "apt": "python3-pip" },
+  "sqlite3":         { "apt": "sqlite3" },
+  "wkhtmltopdf":     { "apt": "wkhtmltopdf" },
+  "pdftotext":       { "apt": "poppler-utils" },
+  "dot":             { "apt": "graphviz" },
+  "sox":             { "apt": "sox" },
+  "zip":             { "apt": "zip" },
+  "unzip":           { "apt": "unzip" },
+  "tree":            { "apt": "tree" },
+  "rsync":           { "apt": "rsync" },
+  "clawhub":         { "npm": "clawhub" },
+  "mcporter":        { "npm": "mcporter" },
+  "oracle":          { "npm": "@steipete/oracle",      "auth": { "type": "env", "vars": ["ORACLE_API_KEY"],  "docs": "steipete.com/oracle" } },
+  "xurl":            { "npm": "@xdevplatform/xurl",   "auth": { "type": "env", "vars": ["TWITTER_API_KEY", "TWITTER_API_SECRET"], "docs": "developer.twitter.com" } },
+  "nano-banana-pro": { "npm": "nano-banana-pro" },
+  "gemini":          { "npm": "@google/gemini-cli",   "auth": { "type": "env", "vars": ["GEMINI_API_KEY"],   "docs": "aistudio.google.com/app/apikey" } },
+  "summarize":       { "npm": "@steipete/summarize" },
+  "songsee":         { "go": "github.com/steipete/songsee/cmd/songsee@latest" },
+  "nano-pdf":        { "uv": "nano-pdf" },
+  "whisper":         { "uv": "openai-whisper",         "auth": { "type": "env", "vars": ["OPENAI_API_KEY"],   "docs": "platform.openai.com/api-keys" } },
+  "blogwatcher": {
+    "fallback": {
+      "version": "0.0.2",
+      "url": "https://github.com/Hyaxia/blogwatcher/releases/download/v0.0.2/blogwatcher_0.0.2_linux_amd64.tar.gz",
+      "sha256": "98d7ce16b3832e144bfa3ca10c13d79aacbffc3292512408e55aa5fae89ba7e3",
+      "strip": 0
+    }
+  },
+  "blu": {
+    "fallback": {
+      "version": "0.1.3",
+      "url": "https://github.com/steipete/blucli/releases/download/v0.1.3/blucli-linux-amd64.tar.gz",
+      "sha256": "adf1e8e1895195f492adc1fc8bbc8672fa0d71ef9235a61038d18607db04b372",
+      "strip": 0
+    }
+  },
+  "gifgrep": {
+    "fallback": {
+      "version": "0.2.1",
+      "url": "https://github.com/steipete/gifgrep/releases/download/v0.2.1/gifgrep_0.2.1_linux_amd64.tar.gz",
+      "sha256": "03ec8e37993f7063c2f92fe33a62e287c75baf57140e189237be2914129b5b76",
+      "strip": 0
+    }
+  },
+  "ordercli": {
+    "fallback": {
+      "version": "0.1.0",
+      "url": "https://github.com/steipete/ordercli/releases/download/v0.1.0/ordercli_0.1.0_linux_amd64.tar.gz",
+      "sha256": "6793d65f60e3a143d37f6c6b87b49c5ad50d474ff25a063ef1e2cc5ca159316b",
+      "strip": 0
+    }
+  },
+  "sonos": {
+    "fallback": {
+      "version": "0.1.0",
+      "url": "https://github.com/steipete/sonoscli/releases/download/v0.1.0/sonoscli_0.1.0_linux_amd64.tar.gz",
+      "sha256": "f20fec4c3e0ff02b5ba6fe4dd276754a93fe507e8252e530344a385635b4d593",
+      "strip": 0
+    }
+  },
+  "gog": {
+    "fallback": {
+      "version": "0.12.0",
+      "url": "https://github.com/steipete/gogcli/releases/download/v0.12.0/gogcli_0.12.0_linux_amd64.tar.gz",
+      "sha256": "a03fccbd67ea2e59a26a56e92de8918577f4bebe4b2f946823419777827cdab2",
+      "strip": 0
+    }
+  },
+  "openhue": {
+    "fallback": {
+      "version": "0.23",
+      "url": "https://github.com/openhue/openhue-cli/releases/download/0.23/openhue_Linux_x86_64.tar.gz",
+      "sha256": "782c78ac5d5946480eee2c11f0b8d10c873a156b52844e7f79d29a0fe6f802f6",
+      "strip": 0
+    }
+  },
+  "goplaces": {
+    "fallback": {
+      "version": "0.3.0",
+      "url": "https://github.com/steipete/goplaces/releases/download/v0.3.0/goplaces_0.3.0_linux_amd64.tar.gz",
+      "sha256": "cfa78d4d9a362bbc2c3d3ff7777160fb5a5994de7e8521b00481b72d4053b1e7",
+      "strip": 0
+    }
+  },
+  "camsnap": {
+    "fallback": {
+      "version": "0.2.0",
+      "url": "https://github.com/steipete/camsnap/releases/download/v0.2.0/camsnap_0.2.0_linux_amd64.tar.gz",
+      "sha256": "dd40ae68a15a7fd8b7a211018f32a4ca263b030e06946e418fee7c82675331db",
+      "strip": 0
+    }
+  },
+  "obsidian-cli": {
+    "fallback": {
+      "version": "0.3.4",
+      "url": "https://github.com/yakitrak/obsidian-cli/releases/download/v0.3.4/notesmd-cli_0.3.4_linux_amd64.tar.gz",
+      "sha256": "a261198233a50a3134f300236c618f4f3bff7574bf82df05ffb69da0a308d9b6",
+      "strip": 0,
+      "binary_name": "notesmd-cli"
+    }
+  },
+  "spotify_player": {
+    "fallback": {
+      "version": "0.23.0",
+      "url": "https://github.com/aome510/spotify-player/releases/download/v0.23.0/spotify_player-x86_64-unknown-linux-gnu.tar.gz",
+      "sha256": "0378f89cd7c78e80b4ed1366f034b363a463d8e07685585d0fcd047b580c7fd0",
+      "strip": 0
+    },
+    "auth": { "type": "config_file", "docs": "github.com/aome510/spotify-player#configuration" }
+  },
+  "op": {
+    "fallback": {
+      "version": "2.34.0",
+      "url": "https://cache.agilebits.com/dist/1P/op2/pkg/v2.34.0/op_linux_amd64_v2.34.0.zip",
+      "sha256": "198b05dcf9a0972778ce5a4e262c459979b0c837257b5da65e2fba6187734226",
+      "strip": 0
+    },
+    "auth": { "type": "config_file", "docs": "developer.1password.com/docs/cli/get-started" }
+  }
+}

@@ -1,0 +1,96 @@
+================================================================
+  OpenClaw Catalog Coverage Report
+  6975 skills analyzed (ranked by downloads)
+  2026-04-18 20:43 UTC
+================================================================
+
+STAGE 1 ─ DISCOVERY
+  Skills in sample:            6975
+  With SKILL.md:              6823  ( 97.8%)
+  Without SKILL.md (opaque):   152  (  2.2%)
+
+  ████████████████████ 98% have declared deps
+
+STAGE 2 ─ DEPENDENCY DECLARATIONS  (skills with SKILL.md)
+  No deps at all:        6073  ( 89.0%)
+  Env / API key only:     222  (  3.3%)
+  Has binary deps:        528  (  7.7%)
+    of which also env:    146  ( 27.7%)
+
+  ██████████████████░░ no deps
+  █░░░░░░░░░░░░░░░░░░░ env only
+  █░░░░░░░░░░░░░░░░░░░ bins
+  ░░░░░░░░░░░░░░░░░░░░ bins+env
+
+STAGE 3 ─ BIN RESOLUTION
+  Unique bins required:         146  (across all skills with deps)
+  ├─ system PATH:                9  (  6.2%)
+  ├─ bin-name-map.json:         23  ( 15.8%)
+  ├─ SKILL.md install spec:     17  ( 11.6%)
+  ├─ brew-only (macOS):         28  ( 19.2%)
+  └─ unmapped (no spec):        69  ( 47.3%)
+
+  Total resolvable:             49  ( 33.6%)
+
+  Skills with bin deps — outcome:
+  ├─ All bins resolvable:      424  ( 80.3%)
+  ├─ Blocked by brew:           27  (  5.1%)
+  └─ Blocked by unmapped:       77  ( 14.6%)
+
+STAGE 4 ─ OVERALL COVERAGE
+  Works on Vessel today:      6719  ( 96.3%)
+    ├─ No deps needed:         6073
+    ├─ API keys only:           222
+    └─ Bins auto-resolved:      424
+  Blocked — brew/macOS:         27  (  0.4%)
+  Blocked — unmapped bins:      77  (  1.1%)
+  Unknown (no SKILL.md):       152  (  2.2%)
+
+  ███████████████████░ 96% work today
+
+STAGE 5 ─ QUICK WINS  (unmapped bins — add to bin-name-map.json)
+  Adding these would unblock the most skills:
+  openclaw                  blocks   13  skill(s)  ░░░░░░░░░░
+  docker                    blocks    6  skill(s)  ░░░░░░░░░░
+  pbpaste                   blocks    6  skill(s)  ░░░░░░░░░░
+  ssh                       blocks    2  skill(s)  ░░░░░░░░░░
+  date                      blocks    2  skill(s)  ░░░░░░░░░░
+  osascript                 blocks    2  skill(s)  ░░░░░░░░░░
+  sparky                    blocks    2  skill(s)  ░░░░░░░░░░
+  rbw                       blocks    1  skill(s)  ░░░░░░░░░░
+  sha256sum                 blocks    1  skill(s)  ░░░░░░░░░░
+  pip                       blocks    1  skill(s)  ░░░░░░░░░░
+  cargo                     blocks    1  skill(s)  ░░░░░░░░░░
+  systemctl                 blocks    1  skill(s)  ░░░░░░░░░░
+  units                     blocks    1  skill(s)  ░░░░░░░░░░
+  arbiter-push              blocks    1  skill(s)  ░░░░░░░░░░
+  dokku                     blocks    1  skill(s)  ░░░░░░░░░░
+  codex                     blocks    1  skill(s)  ░░░░░░░░░░
+  opencode                  blocks    1  skill(s)  ░░░░░░░░░░
+  pi                        blocks    1  skill(s)  ░░░░░░░░░░
+  unbuffer                  blocks    1  skill(s)  ░░░░░░░░░░
+  ssh-agent                 blocks    1  skill(s)  ░░░░░░░░░░
+
+  Brew-only bins (need Linux install spec in bin-name-map.json or SKILL.md):
+  yt-dlp                    blocks    4  skill(s)  ░░░░░░░░░░
+  vdirsyncer                blocks    2  skill(s)  ░░░░░░░░░░
+  khal                      blocks    2  skill(s)  ░░░░░░░░░░
+  gccli                     blocks    2  skill(s)  ░░░░░░░░░░
+  spotify                   blocks    1  skill(s)  ░░░░░░░░░░
+  fd                        blocks    1  skill(s)  ░░░░░░░░░░
+  bat                       blocks    1  skill(s)  ░░░░░░░░░░
+  atvremote                 blocks    1  skill(s)  ░░░░░░░░░░
+  todoist                   blocks    1  skill(s)  ░░░░░░░░░░
+  ansible                   blocks    1  skill(s)  ░░░░░░░░░░
+  ansible-playbook          blocks    1  skill(s)  ░░░░░░░░░░
+  fzf                       blocks    1  skill(s)  ░░░░░░░░░░
+  beepctl                   blocks    1  skill(s)  ░░░░░░░░░░
+  openssl                   blocks    1  skill(s)  ░░░░░░░░░░
+  notesmd-cli               blocks    1  skill(s)  ░░░░░░░░░░
+  inkjet                    blocks    1  skill(s)  ░░░░░░░░░░
+  adb                       blocks    1  skill(s)  ░░░░░░░░░░
+  scrcpy                    blocks    1  skill(s)  ░░░░░░░░░░
+  cloudflared               blocks    1  skill(s)  ░░░░░░░░░░
+  fastmode                  blocks    1  skill(s)  ░░░░░░░░░░
+
+================================================================

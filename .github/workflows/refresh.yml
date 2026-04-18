@@ -1,0 +1,62 @@
+name: Refresh catalog
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # Monday 07:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout dataset repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run catalog coverage scan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_FOR_SCAN }}
+        run: |
+          mkdir -p coverage-output
+          python3 scripts/catalog-coverage.py \
+            --all --with-metadata --with-commits \
+            --output coverage-output \
+            --work-dir coverage-output/repos
+
+      - name: Promote artifacts to data/ and reports/
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          cp coverage-output/skills-${DATE}.csv data/skills-${DATE}.csv
+          cp coverage-output/skills-${DATE}.csv data/latest.csv
+          cp coverage-output/report-${DATE}.txt reports/report-${DATE}.txt
+
+      - name: Commit and push
+        run: |
+          git config user.name "openclaw-skills-bot"
+          git config user.email "bot@vesselofone.com"
+          DATE=$(date -u +%Y-%m-%d)
+          git add data/latest.csv "data/skills-${DATE}.csv" "reports/report-${DATE}.txt"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "data: weekly refresh ${DATE}"
+          git push origin HEAD:main
