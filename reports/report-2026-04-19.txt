@@ -1,0 +1,96 @@
+================================================================
+  OpenClaw Catalog Coverage Report
+  6993 skills analyzed (ranked by downloads)
+  2026-04-19 07:24 UTC
+================================================================
+
+STAGE 1 ─ DISCOVERY
+  Skills in sample:            6993
+  With SKILL.md:              6841  ( 97.8%)
+  Without SKILL.md (opaque):   152  (  2.2%)
+
+  ████████████████████ 98% have declared deps
+
+STAGE 2 ─ DEPENDENCY DECLARATIONS  (skills with SKILL.md)
+  No deps at all:        5217  ( 76.3%)
+  Env / API key only:     408  (  6.0%)
+  Has binary deps:       1216  ( 17.8%)
+    of which also env:    343  ( 28.2%)
+
+  ███████████████░░░░░ no deps
+  █░░░░░░░░░░░░░░░░░░░ env only
+  ███░░░░░░░░░░░░░░░░░ bins
+  █░░░░░░░░░░░░░░░░░░░ bins+env
+
+STAGE 3 ─ BIN RESOLUTION
+  Unique bins required:         252  (across all skills with deps)
+  ├─ system PATH:                9  (  3.6%)
+  ├─ bin-name-map.json:         29  ( 11.5%)
+  ├─ SKILL.md install spec:     37  ( 14.7%)
+  ├─ brew-only (macOS):         57  ( 22.6%)
+  └─ unmapped (no spec):       120  ( 47.6%)
+
+  Total resolvable:             75  ( 29.8%)
+
+  Skills with bin deps — outcome:
+  ├─ All bins resolvable:      975  ( 80.2%)
+  ├─ Blocked by brew:           64  (  5.3%)
+  └─ Blocked by unmapped:      177  ( 14.6%)
+
+STAGE 4 ─ OVERALL COVERAGE
+  Works on Vessel today:      6600  ( 94.4%)
+    ├─ No deps needed:         5217
+    ├─ API keys only:           408
+    └─ Bins auto-resolved:      975
+  Blocked — brew/macOS:         64  (  0.9%)
+  Blocked — unmapped bins:     177  (  2.5%)
+  Unknown (no SKILL.md):       152  (  2.2%)
+
+  ███████████████████░ 94% work today
+
+STAGE 5 ─ QUICK WINS  (unmapped bins — add to bin-name-map.json)
+  Adding these would unblock the most skills:
+  openclaw                  blocks   30  skill(s)  ░░░░░░░░░░
+  pip                       blocks   23  skill(s)  ░░░░░░░░░░
+  cast                      blocks    8  skill(s)  ░░░░░░░░░░
+  docker                    blocks    7  skill(s)  ░░░░░░░░░░
+  claude                    blocks    6  skill(s)  ░░░░░░░░░░
+  pbpaste                   blocks    6  skill(s)  ░░░░░░░░░░
+  ffprobe                   blocks    5  skill(s)  ░░░░░░░░░░
+  openssl                   blocks    4  skill(s)  ░░░░░░░░░░
+  osascript                 blocks    4  skill(s)  ░░░░░░░░░░
+  google-chrome-stable      blocks    4  skill(s)  ░░░░░░░░░░
+  xvfb-run                  blocks    4  skill(s)  ░░░░░░░░░░
+  awk                       blocks    3  skill(s)  ░░░░░░░░░░
+  dbus-launch               blocks    3  skill(s)  ░░░░░░░░░░
+  date                      blocks    2  skill(s)  ░░░░░░░░░░
+  grep                      blocks    2  skill(s)  ░░░░░░░░░░
+  sf                        blocks    2  skill(s)  ░░░░░░░░░░
+  systemctl                 blocks    2  skill(s)  ░░░░░░░░░░
+  opencode                  blocks    2  skill(s)  ░░░░░░░░░░
+  codex                     blocks    2  skill(s)  ░░░░░░░░░░
+  wilma                     blocks    2  skill(s)  ░░░░░░░░░░
+
+  Brew-only bins (need Linux install spec in bin-name-map.json or SKILL.md):
+  yt-dlp                    blocks    9  skill(s)  ░░░░░░░░░░
+  ssh                       blocks    3  skill(s)  ░░░░░░░░░░
+  vdirsyncer                blocks    2  skill(s)  ░░░░░░░░░░
+  khal                      blocks    2  skill(s)  ░░░░░░░░░░
+  potrace                   blocks    2  skill(s)  ░░░░░░░░░░
+  mkbitmap                  blocks    2  skill(s)  ░░░░░░░░░░
+  aws                       blocks    2  skill(s)  ░░░░░░░░░░
+  gccli                     blocks    2  skill(s)  ░░░░░░░░░░
+  spotify                   blocks    1  skill(s)  ░░░░░░░░░░
+  fd                        blocks    1  skill(s)  ░░░░░░░░░░
+  bat                       blocks    1  skill(s)  ░░░░░░░░░░
+  mo                        blocks    1  skill(s)  ░░░░░░░░░░
+  atvremote                 blocks    1  skill(s)  ░░░░░░░░░░
+  todoist                   blocks    1  skill(s)  ░░░░░░░░░░
+  ansible                   blocks    1  skill(s)  ░░░░░░░░░░
+  ansible-playbook          blocks    1  skill(s)  ░░░░░░░░░░
+  bridle                    blocks    1  skill(s)  ░░░░░░░░░░
+  fzf                       blocks    1  skill(s)  ░░░░░░░░░░
+  beepctl                   blocks    1  skill(s)  ░░░░░░░░░░
+  notesmd-cli               blocks    1  skill(s)  ░░░░░░░░░░
+
+================================================================
