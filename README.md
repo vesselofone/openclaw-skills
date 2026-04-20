@@ -1,11 +1,16 @@
-# OpenClaw Skills Catalog
+# OpenClaw Skills Catalog + Ecosystem Research
 
-Weekly-refreshed dataset classifying every skill in the [openclaw/skills](https://github.com/openclaw/skills) catalog by Linux compatibility, ClawHub registry metadata, and last-commit activity.
+Open research on the AI-agent skill ecosystem. Two complementary public datasets under CC BY 4.0:
+
+1. **OpenClaw Skills Catalog** — weekly-refreshed snapshot of every skill in the [openclaw/skills](https://github.com/openclaw/skills) catalog, classified by Linux compatibility, ClawHub registry metadata, and last-commit activity. Measures the *registry*.
+2. **Ecosystem Research 2026-04** — 90-day classification of 16,840 public user reports (GitHub, Hacker News, Reddit) about AI-agent skills across OpenClaw, Vercel `skills.sh`, and Anthropic Claude Code. Measures the *user experience*. See [`reports/state-of-agent-skills-ecosystem-2026-04.md`](./reports/state-of-agent-skills-ecosystem-2026-04.md).
 
 **Browse the data** → [vesselofone.com/skills/openclaw](https://vesselofone.com/skills/openclaw)
 **Read the analysis** → [vesselofone.com/blog/openclaw-skills-1000-tested](https://vesselofone.com/blog/openclaw-skills-1000-tested)
 
 ## What's in this repo
+
+### Catalog (weekly refresh)
 
 | Path | Purpose |
 |---|---|
@@ -20,12 +25,24 @@ Weekly-refreshed dataset classifying every skill in the [openclaw/skills](https:
 | `CITATION.cff` | Academic citation format. |
 | `CHANGELOG.md` | Schema and release history. |
 
+### Ecosystem Research (point-in-time studies)
+
+| Path | Purpose |
+|---|---|
+| `reports/state-of-agent-skills-ecosystem-2026-04.md` | Narrative analysis of 16,840 user reports — headline: 55% of GitHub user pain is operational correctness, not security, not discovery. |
+| `data/ecosystem-research-2026-04/classified-mentions.csv` | 16,635 classified mentions, one row per user report. Links to public sources only — no redistributed body text. |
+| `data/ecosystem-research-2026-04/pain-distribution.csv` | Aggregate count per pain type. |
+| `data/ecosystem-research-2026-04/pain-distribution-by-source.csv` | Pain distribution by source (GitHub / HN / Reddit). |
+| `data/ecosystem-research-2026-04/README.md` | Schema, taxonomy definitions, limitations for this dataset. |
+
 ## Licensing
 
 - **Data** (`data/`, `reports/`) — [CC BY 4.0](./LICENSE-DATA). Use, remix, build on — attribute.
 - **Code** (`scripts/`) — [MIT](./LICENSE-CODE).
 
 ## How to cite
+
+### Catalog
 
 **Plain text:**
 
@@ -41,6 +58,25 @@ Weekly-refreshed dataset classifying every skill in the [openclaw/skills](https:
   publisher = {Vessel},
   url       = {https://github.com/vesselofone/openclaw-skills},
   license   = {CC-BY-4.0}
+}
+```
+
+### Ecosystem research (2026-04)
+
+**Plain text:**
+
+> Bhardwaj, M. (2026). *The State of AI Agent Skills: What Breaks, April 2026*. Vessel. https://github.com/vesselofone/openclaw-skills/blob/main/reports/state-of-agent-skills-ecosystem-2026-04.md
+
+**BibTeX:**
+
+```bibtex
+@misc{vessel_agent_skills_april_2026,
+  author       = {Bhardwaj, Mehul},
+  title        = {The State of AI Agent Skills: What Breaks, April 2026},
+  year         = {2026},
+  publisher    = {Vessel},
+  howpublished = {\url{https://github.com/vesselofone/openclaw-skills/blob/main/reports/state-of-agent-skills-ecosystem-2026-04.md}},
+  license      = {CC-BY-4.0}
 }
 ```
 

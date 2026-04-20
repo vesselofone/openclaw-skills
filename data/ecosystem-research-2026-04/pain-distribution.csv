@@ -1,0 +1,13 @@
+pain,count,pct_of_total
+other,3983,23.94
+noise,3949,23.74
+quality,2577,15.49
+silent-failure,1939,11.66
+compat,979,5.89
+install,855,5.14
+docs,735,4.42
+security,450,2.71
+discovery,412,2.48
+registry-meta,338,2.03
+maintenance,308,1.85
+cross-skill,110,0.66
