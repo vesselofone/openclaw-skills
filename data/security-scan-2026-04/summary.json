@@ -1,0 +1,135 @@
+{
+  "scan_date": "2026-04-20T15:58:10.963902+00:00",
+  "input": "/Users/mehulbhardwaj/repos/openclaw-skills/data/latest.csv",
+  "total_skills_scanned": 6993,
+  "by_verdict": {
+    "dangerous": 642,
+    "caution": 3036,
+    "safe": 3271,
+    "unknown": 44
+  },
+  "by_severity": {
+    "critical": 615,
+    "low": 6257,
+    "medium": 61,
+    "high": 16,
+    "unknown": 44
+  },
+  "pattern_flag_counts": {
+    "piped-to-shell": 610,
+    "non-registry-url": 230,
+    "base64-command": 9,
+    "password-prompt": 4
+  },
+  "skills_with_cve_mention": 33,
+  "cve_severity_distribution": {
+    "medium": 79,
+    "high": 36,
+    "low": 13,
+    "critical": 1
+  },
+  "ghsa_advisories_total": 113,
+  "advisories_per_1000_skills": 16.2,
+  "top_dangerous": [
+    {
+      "slug": "0xarchive",
+      "owner": "0xfantommenace",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: 0xarchive\nVersion: 1.7.0\n\nThe 0xarchive skill bundle "
+    },
+    {
+      "slug": "1123",
+      "owner": "2513483494",
+      "evidence": "pattern:piped-to-shell(critical)|pattern:non-registry-url(medium)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: 1123\nVersion: 1.0.0\n\nThe skill bundle provides instru"
+    },
+    {
+      "slug": "1688-product-search",
+      "owner": "1688aiinfra",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: 1688-product-search\nVersion: 1.0.3\n\nThe skill bundle "
+    },
+    {
+      "slug": "1688-ranking",
+      "owner": "1688aiinfra",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: 1688-ranking\nVersion: 1.0.4\n\nThe 1688-ranking skill i|ClawHub flagged suspicious (suspicious.llm_suspicious)"
+    },
+    {
+      "slug": "1coos-markdown-converter",
+      "owner": "1coos",
+      "evidence": "pattern:piped-to-shell(critical)|pattern:non-registry-url(medium)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: 1coos-markdown-converter\nVersion: 1.0.1\n\nThe skill is"
+    },
+    {
+      "slug": "36kr-ainotes",
+      "owner": "36kr-com",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: 36kr-ainotes\nVersion: 1.0.5\n\nThe skill bundle is a le|ClawHub flagged suspicious (suspicious.llm_suspicious)"
+    },
+    {
+      "slug": "36kr-aireportlist",
+      "owner": "36kr-com",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: 36kr-aireportlist\nVersion: 1.0.7\n\nThe skill bundle pr"
+    },
+    {
+      "slug": "36kr-hotlist",
+      "owner": "36kr-com",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: 36kr-hotlist\nVersion: 1.1.2\n\nThe skill bundle is a le"
+    },
+    {
+      "slug": "60s-api",
+      "owner": "awsl1414",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: 60s-api\nVersion: 1.1.0\n\nThe skill bundle is a legitim"
+    },
+    {
+      "slug": "a2achat",
+      "owner": "andrewandrewsen",
+      "evidence": "pattern:piped-to-shell(critical)|pattern:non-registry-url(medium)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: a2achat\nVersion: 2.1.1\n\nThe skill is designed to inte|ClawHub flagged suspicious (suspicious.vt_suspicious)"
+    },
+    {
+      "slug": "abel-agent-church",
+      "owner": "abeltennyson",
+      "evidence": "pattern:piped-to-shell(critical)|pattern:non-registry-url(medium)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: abel-agent-church\nVersion: 1.0.0\n\nThe agent-church sk|ClawHub flagged suspicious (suspicious.llm_suspicious)"
+    },
+    {
+      "slug": "abel-agent-reach",
+      "owner": "abeltennyson",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: abel-agent-reach\nVersion: 1.0.0\n\nThe skill bundle pro|ClawHub flagged suspicious (suspicious.llm_suspicious, suspicious.vt_suspicious)"
+    },
+    {
+      "slug": "acp-rank",
+      "owner": "axin7",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: acp-rank\nVersion: 1.0.1\n\nThe skill bundle provides an"
+    },
+    {
+      "slug": "ad-designer",
+      "owner": "baitoxkevin",
+      "evidence": "pattern:piped-to-shell(critical)|pattern:non-registry-url(medium)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: ad-designer\nVersion: 1.0.0\n\nThe skill is classified a|ClawHub flagged suspicious (suspicious.llm_suspicious, suspicious.vt_suspicious)"
+    },
+    {
+      "slug": "add-pi-events-d1",
+      "owner": "ababen",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: add-pi-events-d1\nVersion: 1.0.0\n\nThe skill manages Cl|ClawHub flagged suspicious (suspicious.llm_suspicious, suspicious.vt_suspicious)"
+    },
+    {
+      "slug": "admapix-1-0-13",
+      "owner": "baiwei199608",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: admapix-1-0-13\nVersion: 1.0.0\n\nThe admapix skill is a"
+    },
+    {
+      "slug": "admapix-ice",
+      "owner": "bkmcice",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: admapix-ice\nVersion: 1.0.0\n\nThe skill bundle contains|ClawHub flagged suspicious (suspicious.llm_suspicious, suspicious.vt_suspicious)"
+    },
+    {
+      "slug": "adopt-a-mossfrog",
+      "owner": "buystsuff",
+      "evidence": "pattern:piped-to-shell(critical)|pattern:non-registry-url(medium)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: adopt-a-mossfrog\nVersion: 1.0.0\n\nThe skill facilitate|ClawHub flagged suspicious (suspicious.vt_suspicious)"
+    },
+    {
+      "slug": "adp-skill",
+      "owner": "anna4lucky-stack",
+      "evidence": "pattern:piped-to-shell(critical)|LLM analysis: suspicious|VirusTotal: Type: OpenClaw Skill\nName: adp-skill\nVersion: 1.0.0\n\nThe skill bundle provides d|ClawHub flagged suspicious (suspicious.llm_suspicious)"
+    },
+    {
+      "slug": "aegis-firewall",
+      "owner": "alethean-kaw",
+      "evidence": "pattern:base64-command(critical)|pattern:piped-to-shell(critical)|pattern:non-registry-url(medium)|LLM analysis: benign|VirusTotal: Type: OpenClaw Skill\nName: aegis-firewall\nVersion: 3.0.0\n\nThe 'aegis-firewall' s|ClawHub flagged suspicious (suspicious.prompt_injection_instructions)"
+    }
+  ]
+}

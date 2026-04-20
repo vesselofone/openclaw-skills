@@ -307,22 +307,22 @@ def parse_skill_md(content: str) -> dict:
 
 
 def _parse_yaml(text: str) -> dict:
-    """Parse YAML frontmatter. Uses PyYAML if available, else minimal fallback."""
+    """Parse YAML frontmatter. PyYAML required — without it nested requires:
+    blocks are silently dropped, which under-counts binary deps by ~3x.
+    """
     try:
         import yaml  # type: ignore
+    except ImportError as exc:
+        raise RuntimeError(
+            "PyYAML is required (pip install -r requirements.txt). "
+            "The previous flat-key fallback silently mis-parsed nested 'requires:' "
+            "blocks, producing under-counted binary deps."
+        ) from exc
+    try:
         result = yaml.safe_load(text)
-        return result if isinstance(result, dict) else {}
-    except ImportError:
-        pass
     except Exception:
         return {}
-    # Minimal fallback: only handles flat key: value and key: 'json-string'
-    result: dict = {}
-    for line in text.splitlines():
-        if ":" in line and not line.startswith(" ") and not line.startswith("#"):
-            key, _, val = line.partition(":")
-            result[key.strip()] = val.strip()
-    return result
+    return result if isinstance(result, dict) else {}
 
 
 def _try_json(s: str) -> Any:

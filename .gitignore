@@ -4,3 +4,11 @@ coverage-output/
 *.pyc
 .venv/
 .DS_Store
+
+# Internal working context — public repo, don't leak internal notes.
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# Security scan HTTP cache — large, reproducible, not dataset
+data/security-scan-*/cache.json
